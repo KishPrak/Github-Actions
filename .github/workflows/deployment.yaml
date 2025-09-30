@@ -1,1 +1,17 @@
+name: Echo Hello World
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Echo message
+        run: echo "hello world"
 
